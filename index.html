@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Munira Khakimova, portfolio</title>
+<title>Munira Khakimova — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
@@ -96,6 +96,22 @@ h3 { font-family: var(--display); font-weight: 600; font-size: clamp(27px, 3.4vw
 .btn { display: inline-block; justify-self: start; padding: 14px 24px; border: 1px solid currentColor; text-decoration: none; font-weight: 500; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; }
 .btn:hover { background: var(--cream); color: var(--ink); border-color: var(--cream); }
 
+.how { margin-top: clamp(48px, 7vw, 80px); display: grid; gap: 22px; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.steps li { background: #2a0d1c55; border: 1px solid #f6eedd55; padding: 20px 20px 22px; display: grid; gap: 8px; align-content: start; }
+.steps li.ai { background: #f6eedd; color: var(--ink); border-color: #f6eedd; }
+.steps li.ai code { background: #2a0d1c18; }
+.steps .n { font-weight: 500; font-size: 12px; letter-spacing: 0.32em; opacity: 0.8; }
+.steps b { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 30px; line-height: 1; }
+.steps p { font-size: 16px; }
+.beyond { margin-top: clamp(40px, 6vw, 64px); }
+.intro { margin-bottom: clamp(40px, 6vw, 64px); }
+.duo { margin-top: clamp(40px, 6vw, 64px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid #f6eedd66; border-bottom: 1px solid #f6eedd66; }
+.duo > div { padding: 28px 28px 30px 0; display: grid; gap: 12px; }
+.duo > div + div { padding-left: 28px; border-left: 1px solid #f6eedd66; }
+.duo p { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.1; }
+.between { margin-top: 26px; font-family: var(--display); font-style: italic; font-size: clamp(24px, 3vw, 32px); }
+
 /* Work */
 .case { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 14px 56px; padding: 34px 0; border-top: 1px solid #f6eedd66; }
 .case:first-child { border-top: 0; padding-top: 0; }
@@ -139,6 +155,9 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
   .phone { max-width: 250px; justify-self: center; }
   .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .duo { grid-template-columns: minmax(0, 1fr); }
+  .duo > div + div { padding-left: 0; border-left: 0; border-top: 1px solid #f6eedd66; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .phone { transition: transform 0.4s ease; }
@@ -161,8 +180,8 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
   <div class="tag">
     <div class="label">Portfolio · Almaty</div>
     <h1>Munira <span>Khakimova</span></h1>
-    <p class="lead">I believe a happy life takes three things: something for the mind, something for the soul and something for the body.</p>
-    <p class="about">For six years I've been building social products in education, city transport and banking as a business and systems analyst. Beyond complex work problems, I love making things by hand: I sew, style my home and invent costumes. Everything I do comes down to one thing: turning an idea into a great product that's a pleasure to use.</p>
+    <p class="lead">I believe happiness comes down to three things: something for the mind, something for the soul, and something for the body.</p>
+    <p class="about">For six years, I’ve been building products across education, public transport, and banking as a business and systems analyst. And when I’m not busy untangling complex work challenges, I love making things by hand: sewing, decorating my home, and dreaming up costumes. There’s one thing behind all of it — turning an idea into something great that people genuinely enjoy using.</p>
     <div class="contacts">
       <a href="https://t.me/thatsmoony">Telegram: @thatsmoony</a>
       <a href="https://www.linkedin.com/in/munira-khakimova-39a586237/">LinkedIn</a>
@@ -181,7 +200,7 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
   <div class="wrap">
     <header class="head">
       <div class="label">My own product</div>
-      <h2>Where2Go: a bot that solves the problem</h2>
+      <h2>Where2Go: a bot that solves a very real problem</h2>
     </header>
     <div class="strip">
       <figure><img src="w2g-1-work.jpg" alt="Over the shoulder in a meeting: the group chat asks where to go tonight" width="900" height="1200"><figcaption><b>18:40</b> · at work</figcaption></figure>
@@ -195,12 +214,27 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
         <img src="where2go.gif" alt="Screen recording: a group vote in the Where2Go bot and the list of places it suggests" width="340" height="669">
       </div>
       <div class="prose">
-        <p>“So, where are we going in the end?” It's the question that comes up almost every time my girlfriends and I plan to meet. So many places, and yet it feels like there's nowhere to go. That's how the bot was born, as one way to solve it. At its core is a simple survey: everyone in the chat marks what they're in the mood for that evening — cuisine, drinks, budget, vibe. The bot ranks places from a shared base and returns a top list that fits the whole group.</p>
-        <p>The first version ran on a simple weighted algorithm, and every venue had to be tagged by hand. Well, AI handles that perfectly. Just type <code>/discover best raves in Berlin</code> and a list of matching places is ready. Handily, the AI tags the options in the right format straight away, so a venue can go into the base and you never spend tokens searching for it again.</p>
-        <p>Either way, people have the final say. It's either a vibe or it's not.</p>
+        <p>“So, where are we actually going?” — the question that comes up pretty much every time my friends and I try to meet up. So many places, yet somehow nowhere to go. That’s the problem that inspired this bot. The idea is simple: everyone in the chat fills out a quick poll about their plans for the evening — food, drinks, budget, and mood. The bot ranks places from a shared database and serves up the top picks to match the whole group’s taste.</p>
+        <p>The first version ran on a simple weighted algorithm, which meant tagging every venue by hand. Well, AI is pretty great at taking that off your plate. Just type <code>/discover cool raves in Berlin</code>, and voilà — a list of places that fit the brief. Even better, AI tags each suggestion in the right format, so you can add it straight to the database and won’t have to spend tokens searching for it again.</p>
+        <p>Either way, people always get the final say — it’s a vibe or it’s not.</p>
         <p class="stack">Python · aiogram · PostgreSQL · Anthropic API · Railway</p>
-        <a class="btn" href="https://github.com/mfkhakimova-boop/where2go">Code and README on GitHub</a>
+        <a class="btn" href="https://github.com/mfkhakimova-boop/where2go">Code &amp; details on GitHub</a>
       </div>
+    </div>
+    <div class="how">
+      <h3>How it works</h3>
+      <ol class="steps">
+        <li><span class="n">01</span><b>Ask</b><p>Someone types <code>/vote</code> in the group chat.</p></li>
+        <li><span class="n">02</span><b>Vote</b><p>Everyone taps cuisine, drinks, budget and vibe, wherever they are.</p></li>
+        <li><span class="n">03</span><b>Pick</b><p>The bot ranks places from the shared base and sends the top three.</p></li>
+        <li class="ai"><span class="n">AI</span><b>Scout</b><p><code>/discover</code> finds new places in any city and tags them for the base.</p></li>
+      </ol>
+    </div>
+    <div class="prose beyond">
+      <h3>Beyond the bot</h3>
+      <p>What I love most about Where2Go is how quickly an idea can turn into something real. Just one hour after identifying a problem, I had a working prototype.</p>
+      <p>But what excites me even more is its potential. Today, it’s a bot that helps friends decide where to go. Tomorrow, it could become a travel companion, a local city guide, or a discovery platform connecting people with recommendations from local communities and independent reviewers.</p>
+      <p>And why stop at places to eat? There’s a whole world out there to discover.</p>
     </div>
   </div>
 </section>
@@ -209,39 +243,39 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
   <div class="wrap">
     <header class="head">
       <div class="label">Work</div>
-      <h2>Designing products is like assembling a 10,000-piece puzzle</h2>
+      <h2>Building products is like putting together a 10,000-piece puzzle</h2>
     </header>
     <div class="cases">
       <article class="case">
         <div>
-          <h3>AI in an online course builder</h3>
-          <div class="label where">Education platform</div>
+          <h3>AI for a course-building platform</h3>
+          <div class="label where">EdTech platform</div>
         </div>
         <dl>
-          <div><dt>Task</dt><dd>Build generative AI into a platform where instructional designers create courses.</dd></div>
-          <div><dt>What I did</dt><dd>The AI boom of 2023. I learned prompt engineering from scratch, designed the UI/UX for an LMS, and wrote the spec and the prompts that generate curricula along with tests on the material.</dd></div>
-          <div><dt>Result</dt><dd>I was invited to share the experience at the White Nights of Digital Technologies in Education conference. Showed it, told it :)</dd></div>
+          <div><dt>The challenge</dt><dd>Integrate generative AI into a platform where learning designers build courses.</dd></div>
+          <div><dt>What I did</dt><dd>When the AI boom hit in 2023, I taught myself prompt engineering from scratch, designed the LMS UI/UX, and wrote the technical specs and prompts for generating course plans — plus quizzes based on the learning material.</dd></div>
+          <div><dt>The outcome</dt><dd>I was invited to share the experience at the “White Nights of Digital Technologies in Education” conference. Showed up, shared the story :)</dd></div>
         </dl>
       </article>
       <article class="case">
         <div>
-          <h3>Almaty city transport app</h3>
+          <h3>Almaty public transport app</h3>
           <div class="label where">ONAY!</div>
         </div>
         <dl>
-          <div><dt>Task</dt><dd>Grow the city transport mobile app, mostly on the eCommerce side.</dd></div>
-          <div><dt>What I did</dt><dd>I was there when eCommerce was born in the ONAY! app, and helped shape and test product hypotheses.</dd></div>
-          <div><dt>Result</dt><dd>On the complex side, I designed the consent flow for personal data processing. On the creative side, I launched a fun feature for customizing transport cards.</dd></div>
+          <div><dt>The challenge</dt><dd>Develop the city’s public transport app, with a focus on eCommerce.</dd></div>
+          <div><dt>What I did</dt><dd>I was there when eCommerce was taking shape in the ONAY! app, helping develop and test new hypotheses.</dd></div>
+          <div><dt>The outcome</dt><dd>On the complex side, I designed the user flow for consent to personal data processing. On the creative side, I launched a fun feature that lets users customise their transit cards.</dd></div>
         </dl>
       </article>
       <article class="case">
         <div>
           <h3>Mobile banking for VIP clients</h3>
-          <div class="label where">One of Kazakhstan's banks</div>
+          <div class="label where">A bank in Kazakhstan</div>
         </div>
         <dl>
-          <div><dt>Task</dt><dd>Give premium clients their own section in the bank's mobile app.</dd></div>
-          <div><dt>What I did</dt><dd>Systems analyst. I designed the architecture and integrations from scratch, and we launched new functionality. I'm responsible for seamless processes, logical user flows and requirements for development, and I keep improving the product to this day.</dd></div>
+          <div><dt>The challenge</dt><dd>Create a dedicated section in the bank’s mobile app for premium clients.</dd></div>
+          <div><dt>What I did</dt><dd>As a systems analyst, I designed the architecture and integrations from scratch, and helped launch the new functionality. I’m responsible for seamless processes, intuitive user flows, and clear development requirements. And I’m still making the product better.</dd></div>
         </dl>
       </article>
     </div>
@@ -253,14 +287,19 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
 <section class="band paper" id="handmade">
   <div class="wrap">
     <header class="head">
-      <div class="label">Handmade</div>
-      <h2>What I make for the soul</h2>
+      <div class="label">Made by hand</div>
+      <h2>Little things I make for the love of it</h2>
     </header>
+    <div class="prose intro">
+      <p>It all started with a Halloween costume. We had a sewing machine at home, I needed a Sailor Moon costume, and apparently buying one wasn’t an option. So I made it myself.</p>
+      <p>Since then, making things by hand has become my way to unwind and express myself. I love surrounding myself with beautiful things and bringing my own sense of beauty into the world around me.</p>
+      <p>For me, creating something isn’t just about the final result. It’s about making something that feels right, looks right, and is uniquely mine.</p>
+    </div>
 
     <div class="story">
       <div class="prose">
-        <h3>Shades for ugly boob lights</h3>
-        <p>I believe you should live beautifully and comfortably, even in a rented flat. Mine had ugly ceiling lights that killed the whole atmosphere, so I had to come up with a renter-friendly fix that lets me put everything back when I move out. The result: cheap materials from Chinese marketplaces, neodymium magnets, a pair of nimble hands… and done!</p>
+        <h3>Giving ugly ceiling lights a glow-up</h3>
+        <p>I believe you should make your home beautiful and cosy, even when you’re renting. The apartment came with some pretty sad-looking ceiling lights that killed the whole vibe. So I came up with a renter-friendly makeover that can be completely undone when it’s time to move out. The recipe: inexpensive finds from Chinese marketplaces, neodymium magnets, a little handiwork… and voilà!</p>
       </div>
       <figure class="wide">
         <img src="lamp-before.jpg" alt="A plain round ceiling light" width="1100" height="489">
@@ -281,7 +320,7 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
         </figure>
         <figure>
           <img src="lamp-shell.jpg" alt="A lampshade of pearl discs and feathers on the ceiling" width="1100" height="954">
-          <figcaption><b>After</b> · discs and feathers</figcaption>
+          <figcaption><b>After</b> · discs &amp; feathers</figcaption>
         </figure>
       </div>
     </div>
@@ -290,13 +329,13 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
       <div class="clothes">
         <div>
           <div class="prose">
-            <h3>Convertible satin top</h3>
-            <p>Saw something like it online and couldn't resist. A simple construction: a rectangle and four long ribbons you can tie in different ways. Cut by eye.</p>
+            <h3>A satin wrap top</h3>
+            <p>Saw something like this online and just had to make one. The design is simple: a rectangle and four long ties that can be wrapped and knotted in different ways. I cut the fabric by eye — no pattern, just vibes.</p>
           </div>
           <div class="pair">
             <figure>
               <img src="satin-process.jpg" alt="A sewing machine, green satin ribbons and a ginger cat lying on them" width="1071" height="1100">
-              <figcaption><b>Process</b> · with an assistant</figcaption>
+              <figcaption><b>In progress</b> · with an assistant</figcaption>
             </figure>
             <figure>
               <img src="satin-top.jpg" alt="The finished green satin halter top" width="916" height="1100">
@@ -306,13 +345,13 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
         </div>
         <div>
           <div class="prose">
-            <h3>Denim top, a gift for my sister</h3>
-            <p>Darts, pleats at the waist and a tie at the collar. Sewn from a ready-made pattern.</p>
+            <h3>A denim top for my sister</h3>
+            <p>Darts, a gathered waist, and a tie at the neckline. Made using a ready-made pattern.</p>
           </div>
           <div class="pair">
             <figure>
               <img src="denim-process.jpg" alt="Cut denim pieces next to a sewing machine and a tape measure" width="1100" height="825">
-              <figcaption><b>Process</b></figcaption>
+              <figcaption><b>In progress</b></figcaption>
             </figure>
             <figure>
               <img src="denim-top.jpg" alt="The finished denim top with a keyhole neckline and a tie" width="825" height="1100">
@@ -326,13 +365,13 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
     <div class="story">
       <div class="costume">
         <div class="prose">
-          <h3>Christmas tree costume</h3>
-          <p>I was invited to a costume party and had nothing to wear. I designed this from scratch using Pinterest references: big bows, tulle and a 3D star in red-and-white check, made from leftover wrapping paper.</p>
+          <h3>A Christmas tree costume</h3>
+          <p>Got invited to a costume party and had absolutely nothing to wear. So I made a Christmas tree costume from scratch, using Pinterest for inspiration: oversized bows, tulle, and a big red-and-white checkered star made from leftover wrapping paper.</p>
         </div>
         <div class="pair">
           <figure class="tall">
             <img src="tree-star.jpg" alt="A 3D five-pointed star folded from red-and-white checked paper" width="825" height="1100">
-            <figcaption><b>Detail</b> · star</figcaption>
+            <figcaption><b>Detail</b> · the star</figcaption>
           </figure>
           <figure class="tall">
             <img src="tree-costume.jpg" alt="Munira in a Christmas tree costume of green bows, with a star on her head" width="565" height="1100">
@@ -344,10 +383,31 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
   </div>
 </section>
 
+<div class="zebra-strip" aria-hidden="true"></div>
+
+<section class="band mauve" id="manifesto">
+  <div class="wrap">
+    <header class="head">
+      <div class="label">Manifesto</div>
+      <h2>Why Soul Camp?</h2>
+    </header>
+    <div class="prose">
+      <p>I love what I do, and I’m always excited to discover new tools, experiment, and keep creating.</p>
+      <p>I’m joining Soul Camp to learn a new tool, challenge myself in an unfamiliar environment, meet inspiring people and experts, and, of course, have a genuinely good time along the way.</p>
+      <p>I’m going into the Tech track without a clear idea of what I’ll build or how Higgsfield will fit into it. And honestly, that’s what makes it even more exciting. I’m curious to see where the experiment takes me.</p>
+    </div>
+    <div class="duo">
+      <div><div class="label">My colleagues would say</div><p>Responsible. Reliable. Self&#8209;critical.</p></div>
+      <div><div class="label">My friends would say</div><p>Creative. Dreamy. Spontaneous.</p></div>
+    </div>
+    <p class="between">Somewhere in between, that’s me.</p>
+  </div>
+</section>
+
 <footer class="band satin">
   <div class="wrap">
     <div class="inner">
-      <p class="big">Get in touch</p>
+      <p class="big">Let’s make something unexpected.</p>
       <div class="contacts">
         <a href="https://t.me/thatsmoony">Telegram: @thatsmoony</a>
         <a href="https://www.linkedin.com/in/munira-khakimova-39a586237/">LinkedIn: munira-khakimova</a>
