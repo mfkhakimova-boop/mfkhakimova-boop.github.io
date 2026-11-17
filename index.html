@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@font-face { font-family: "Name Display"; src: url("fonts/playfair-900.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Name Display"; src: url("fonts/playfair-900-italic.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Name Display"; src: url("playfair-900.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Name Display"; src: url("playfair-900-italic.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
 /* Layout idea: a fashion moodboard. The cover is a collage of real fabric swatches with a
    garment hang tag carrying the name; sections are full-bleed fabrics (mauve, olive velvet,
    crimson satin) and one cream paper spread for the photos. Zebra strips mark the seams.
@@ -43,14 +43,14 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .cover { position: relative; padding: clamp(40px, 9vw, 110px) 28px; display: grid; }
 .collage { position: absolute; inset: 0; overflow: hidden; }
 .sw { position: absolute; background-size: cover; background-position: center; }
-.sw.tiles   { left: 0;   top: 0;   width: 30%; height: 56%; background-image: url("img/tex-tiles.jpg"); }
-.sw.olive   { left: 30%; top: 0;   width: 42%; height: 47%; background-image: url("img/tex-olive.jpg"); }
-.sw.satin   { left: 72%; top: 0;   width: 28%; height: 60%; background-image: url("img/tex-satin.jpg"); }
-.sw.fur     { left: 0;   top: 56%; width: 30%; height: 44%; background-image: linear-gradient(#3d0f3399, #3d0f3399), url("img/tex-fur.jpg"); }
-.sw.mauve   { left: 30%; top: 47%; width: 42%; height: 53%; background-image: url("img/tex-mauve.jpg"); }
-.sw.velvet  { left: 72%; top: 60%; width: 28%; height: 40%; background-image: linear-gradient(#0c2414b8, #0c2414b8), url("img/tex-olive.jpg"); }
-.sw.zebra   { left: 21%; top: 33%; width: 16%; height: 46%; background-image: url("img/tex-zebra.jpg"); box-shadow: 0 18px 40px #0006; }
-.sw.leopard { left: 61%; top: 36%; width: min(19%, 250px); aspect-ratio: 1; border-radius: 50%; background-image: url("img/tex-leopard.jpg"); box-shadow: 0 18px 40px #0006; }
+.sw.tiles   { left: 0;   top: 0;   width: 30%; height: 56%; background-image: url("tex-tiles.jpg"); }
+.sw.olive   { left: 30%; top: 0;   width: 42%; height: 47%; background-image: url("tex-olive.jpg"); }
+.sw.satin   { left: 72%; top: 0;   width: 28%; height: 60%; background-image: url("tex-satin.jpg"); }
+.sw.fur     { left: 0;   top: 56%; width: 30%; height: 44%; background-image: linear-gradient(#3d0f3399, #3d0f3399), url("tex-fur.jpg"); }
+.sw.mauve   { left: 30%; top: 47%; width: 42%; height: 53%; background-image: url("tex-mauve.jpg"); }
+.sw.velvet  { left: 72%; top: 60%; width: 28%; height: 40%; background-image: linear-gradient(#0c2414b8, #0c2414b8), url("tex-olive.jpg"); }
+.sw.zebra   { left: 21%; top: 33%; width: 16%; height: 46%; background-image: url("tex-zebra.jpg"); box-shadow: 0 18px 40px #0006; }
+.sw.leopard { left: 61%; top: 36%; width: min(19%, 250px); aspect-ratio: 1; border-radius: 50%; background-image: url("tex-leopard.jpg"); box-shadow: 0 18px 40px #0006; }
 
 .tag {
   position: relative; z-index: 2;
@@ -69,14 +69,14 @@ h1 span { display: block; font-style: italic; padding-left: 0.35em; }
 .contacts { display: flex; flex-wrap: wrap; gap: 10px 26px; font-weight: 500; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; }
 .furstar { position: absolute; z-index: 3; right: -70px; top: -90px; width: 170px; height: 300px; filter: drop-shadow(0 14px 22px #0007); pointer-events: none; }
 
-.zebra-strip { height: 40px; background: url("img/tex-zebra.jpg") center 40% / cover; }
+.zebra-strip { height: 40px; background: url("tex-zebra.jpg") center 40% / cover; }
 
 /* Bands */
 .band { position: relative; padding: clamp(56px, 8vw, 104px) 0; background-size: cover; background-position: center; }
-.band.mauve { background-image: url("img/tex-mauve.jpg"); color: var(--cream); }
-.band.olive { background-image: linear-gradient(#14200ab0, #14200ab0), url("img/tex-olive.jpg"); color: var(--cream); }
+.band.mauve { background-image: url("tex-mauve.jpg"); color: var(--cream); }
+.band.olive { background-image: linear-gradient(#14200ab0, #14200ab0), url("tex-olive.jpg"); color: var(--cream); }
 .band.paper { background: var(--paper); color: var(--ink); }
-.band.satin { background-image: linear-gradient(#3a0418b0, #3a0418b0), url("img/tex-satin.jpg"); color: var(--cream); }
+.band.satin { background-image: linear-gradient(#3a0418b0, #3a0418b0), url("tex-satin.jpg"); color: var(--cream); }
 
 header.head { display: grid; gap: 14px; margin-bottom: clamp(30px, 5vw, 56px); }
 h2 { font-family: var(--display); font-weight: 500; font-style: italic; font-size: clamp(44px, 7.4vw, 92px); line-height: 0.95; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
@@ -169,7 +169,7 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
     </div>
     <svg class="furstar" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
       <defs><clipPath id="st"><path d="M50 0 C52 36 58 45 100 50 C58 55 52 64 50 100 C48 64 42 55 0 50 C42 45 48 36 50 0Z"/></clipPath></defs>
-      <image href="img/tex-fur.jpg" width="100" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#st)"/>
+      <image href="tex-fur.jpg" width="100" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#st)"/>
     </svg>
   </div>
 </div>
@@ -183,14 +183,14 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
       <h2>Where2Go: a bot that solves the problem</h2>
     </header>
     <div class="strip">
-      <figure><img src="img/w2g-1-work.jpg" alt="Over the shoulder in a meeting: the group chat asks where to go tonight" width="900" height="1200"><figcaption><b>18:40</b> · at work</figcaption></figure>
-      <figure><img src="img/w2g-2-home.jpg" alt="Over the shoulder in a bubble bath: voting with the Where2Go bot in the chat" width="900" height="1200"><figcaption><b>18:46</b> · at home</figcaption></figure>
-      <figure><img src="img/w2g-3-gym.jpg" alt="Over the shoulder on a treadmill: the bot sends the top places for tonight" width="900" height="1200"><figcaption><b>18:52</b> · at the gym</figcaption></figure>
-      <figure><img src="img/w2g-4-dinner.jpg" alt="The three friends laughing at dinner, phones face down on the table" width="900" height="1200"><figcaption><b>20:00</b> · together</figcaption></figure>
+      <figure><img src="w2g-1-work.jpg" alt="Over the shoulder in a meeting: the group chat asks where to go tonight" width="900" height="1200"><figcaption><b>18:40</b> · at work</figcaption></figure>
+      <figure><img src="w2g-2-home.jpg" alt="Over the shoulder in a bubble bath: voting with the Where2Go bot in the chat" width="900" height="1200"><figcaption><b>18:46</b> · at home</figcaption></figure>
+      <figure><img src="w2g-3-gym.jpg" alt="Over the shoulder on a treadmill: the bot sends the top places for tonight" width="900" height="1200"><figcaption><b>18:52</b> · at the gym</figcaption></figure>
+      <figure><img src="w2g-4-dinner.jpg" alt="The three friends laughing at dinner, phones face down on the table" width="900" height="1200"><figcaption><b>20:00</b> · together</figcaption></figure>
     </div>
     <div class="product">
       <div class="phone">
-        <img src="img/where2go.gif" alt="Screen recording: a group vote in the Where2Go bot and the list of places it suggests" width="340" height="669">
+        <img src="where2go.gif" alt="Screen recording: a group vote in the Where2Go bot and the list of places it suggests" width="340" height="669">
       </div>
       <div class="prose">
         <p>“So, where are we going in the end?” It's the question that comes up almost every time my girlfriends and I plan to meet. So many places, and yet it feels like there's nowhere to go. That's how the bot was born, as one way to solve it. At its core is a simple survey: everyone in the chat marks what they're in the mood for that evening — cuisine, drinks, budget, vibe. The bot ranks places from a shared base and returns a top list that fits the whole group.</p>
@@ -261,24 +261,24 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
         <p>I believe you should live beautifully and comfortably, even in a rented flat. Mine had ugly ceiling lights that killed the whole atmosphere, so I had to come up with a renter-friendly fix that lets me put everything back when I move out. The result: cheap materials from Chinese marketplaces, neodymium magnets, a pair of nimble hands… and done!</p>
       </div>
       <figure class="wide">
-        <img src="img/lamp-before.jpg" alt="A plain round ceiling light" width="1100" height="489">
+        <img src="lamp-before.jpg" alt="A plain round ceiling light" width="1100" height="489">
         <figcaption><b>Before</b></figcaption>
       </figure>
       <div class="grid four">
         <figure>
-          <img src="img/lamp-materials.jpg" alt="Hoops, fringe, pearl discs, jump rings and pliers laid out on the floor" width="825" height="1100">
+          <img src="lamp-materials.jpg" alt="Hoops, fringe, pearl discs, jump rings and pliers laid out on the floor" width="825" height="1100">
           <figcaption><b>Materials</b></figcaption>
         </figure>
         <figure>
-          <img src="img/lamp-assembly.jpg" alt="A hoop on a table with strands of pearl discs hanging from it" width="825" height="1100">
+          <img src="lamp-assembly.jpg" alt="A hoop on a table with strands of pearl discs hanging from it" width="825" height="1100">
           <figcaption><b>Assembly</b></figcaption>
         </figure>
         <figure>
-          <img src="img/lamp-fringe.jpg" alt="A red and gold fringe lampshade on the ceiling" width="1100" height="1027">
+          <img src="lamp-fringe.jpg" alt="A red and gold fringe lampshade on the ceiling" width="1100" height="1027">
           <figcaption><b>After</b> · fringe</figcaption>
         </figure>
         <figure>
-          <img src="img/lamp-shell.jpg" alt="A lampshade of pearl discs and feathers on the ceiling" width="1100" height="954">
+          <img src="lamp-shell.jpg" alt="A lampshade of pearl discs and feathers on the ceiling" width="1100" height="954">
           <figcaption><b>After</b> · discs and feathers</figcaption>
         </figure>
       </div>
@@ -293,11 +293,11 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
           </div>
           <div class="pair">
             <figure>
-              <img src="img/satin-process.jpg" alt="A sewing machine, green satin ribbons and a ginger cat lying on them" width="1071" height="1100">
+              <img src="satin-process.jpg" alt="A sewing machine, green satin ribbons and a ginger cat lying on them" width="1071" height="1100">
               <figcaption><b>Process</b> · with an assistant</figcaption>
             </figure>
             <figure>
-              <img src="img/satin-top.jpg" alt="The finished green satin halter top" width="916" height="1100">
+              <img src="satin-top.jpg" alt="The finished green satin halter top" width="916" height="1100">
               <figcaption><b>Done</b></figcaption>
             </figure>
           </div>
@@ -309,11 +309,11 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
           </div>
           <div class="pair">
             <figure>
-              <img src="img/denim-process.jpg" alt="Cut denim pieces next to a sewing machine and a tape measure" width="1100" height="825">
+              <img src="denim-process.jpg" alt="Cut denim pieces next to a sewing machine and a tape measure" width="1100" height="825">
               <figcaption><b>Process</b></figcaption>
             </figure>
             <figure>
-              <img src="img/denim-top.jpg" alt="The finished denim top with a keyhole neckline and a tie" width="825" height="1100">
+              <img src="denim-top.jpg" alt="The finished denim top with a keyhole neckline and a tie" width="825" height="1100">
               <figcaption><b>Done</b></figcaption>
             </figure>
           </div>
@@ -329,11 +329,11 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
         </div>
         <div class="pair">
           <figure class="tall">
-            <img src="img/tree-star.jpg" alt="A 3D five-pointed star folded from red-and-white checked paper" width="825" height="1100">
+            <img src="tree-star.jpg" alt="A 3D five-pointed star folded from red-and-white checked paper" width="825" height="1100">
             <figcaption><b>Detail</b> · star</figcaption>
           </figure>
           <figure class="tall">
-            <img src="img/tree-costume.jpg" alt="Munira in a Christmas tree costume of green bows, with a star on her head" width="565" height="1100">
+            <img src="tree-costume.jpg" alt="Munira in a Christmas tree costume of green bows, with a star on her head" width="565" height="1100">
             <figcaption><b>Done</b></figcaption>
           </figure>
         </div>
