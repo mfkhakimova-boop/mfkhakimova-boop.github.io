@@ -84,10 +84,11 @@ h3 { font-family: var(--display); font-weight: 600; font-size: clamp(27px, 3.4vw
 .prose { display: grid; gap: 14px; max-width: 36em; }
 
 /* Product */
-.strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: clamp(36px, 6vw, 64px); }
+.strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 60px; }
 .strip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; box-shadow: 0 18px 40px #0005; }
 .strip figcaption { color: var(--cream); opacity: 0.9; }
 .strip figcaption b { color: var(--cream); }
+.strip-note { margin: -44px 0 clamp(36px, 6vw, 64px); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; }
 .product { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
 .phone { padding: 10px; background: #1a0d14; border-radius: 30px; box-shadow: 0 30px 60px #0007; transform: rotate(-3deg); }
 .phone img { border-radius: 22px; width: 100%; }
@@ -188,6 +189,7 @@ footer .big { font-family: var(--display); font-style: italic; font-weight: 500;
       <figure><img src="w2g-3-gym.jpg" alt="Over the shoulder on a treadmill: the bot sends the top places for tonight" width="900" height="1200"><figcaption><b>18:52</b> · at the gym</figcaption></figure>
       <figure><img src="w2g-4-dinner.jpg" alt="The three friends laughing at dinner, phones face down on the table" width="900" height="1200"><figcaption><b>20:00</b> · together</figcaption></figure>
     </div>
+    <p class="strip-note">Photos generated with Higgsfield Soul 2.0</p>
     <div class="product">
       <div class="phone">
         <img src="where2go.gif" alt="Screen recording: a group vote in the Where2Go bot and the list of places it suggests" width="340" height="669">
